@@ -1,0 +1,17 @@
+.btn {
+    @include btn;
+    margin:  25px auto;
+    width: 60%;
+    &--size {
+        width: 50%;
+        margin: 30px auto;
+    }
+    &:hover {
+        background-image: linear-gradient(#ff79da, #9356dc);
+        box-shadow: 1px 3px 6px 2px $darker-shadow;
+    }
+    @media (min-width: 768px) {
+        width: 300px;
+    }
+
+}

@@ -1,0 +1,56 @@
+@use "../utils/variables.scss";
+@mixin font-awesome ($font-weight: 400){
+    display: inline-block;
+    position: absolute;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: $font-weight;
+}
+/*heart before*/
+  @mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
+    @include font-awesome;
+    content: "\f004";
+    font-size: 2rem;
+    right: 2rem;
+    top: 32%;
+    font-weight: $font-weight;
+    margin-left: 65%;
+    color: $color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: $opacity;
+    transition: color 150ms 50ms ease; 
+}
+ /*heart after*/
+@mixin heart-solid {
+    position: relative;
+    border-radius: 0 0 $font-sizes $font-sizes;
+    &::before {
+      @include heart;
+    }
+    &::after {
+      @include heart($opacity: 0, $font-weight: 900, $color: transparent);
+      @include gradient;
+    }
+    &:hover::after {
+      opacity: 1;
+      transform: scale(1.1, 1.2);
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+    }
+}
+@mixin btn {
+    border-radius: 20px;
+    padding: 13px;
+    display: block;
+    background: $gardient-btn;
+    border: none;
+    color: white;
+    font-size: 1.2em;;
+    outline: none;
+    box-shadow: 1px 3px 6px 2px $shadow;
+    cursor: pointer; 
+}

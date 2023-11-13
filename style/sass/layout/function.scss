@@ -1,0 +1,123 @@
+@use "../utils/variables.scss";
+
+/* "fonctionnement" */
+
+.function {
+  padding: 30px 20px;
+
+  @media (min-width: 1024px) {
+    padding: 30px 40px;
+  }
+
+  &__title {
+    @media screen and (min-width: 1024px) {
+      margin-left: 15px;
+    }
+
+    @media (min-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    width: 90%;
+    margin: 10px;
+    padding: 0;
+
+    @media (min-width: 640px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 25px;
+      width: 100%;
+      margin: 0;
+    }
+
+    @media (min-width: 1024px) {
+      margin: auto;
+      width: 90%;
+      grid-gap: 40px;
+    }
+
+    @media (min-width: 1280px) {
+      justify-items: center;
+      grid-gap: 16px;
+      width: 75%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 75px;
+    margin: 19px;
+    padding: 0 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9em;
+    background-color: $section-backColor;
+    box-shadow: $box-shadow;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($primary-color, 35%);
+      transition: 0.5s;
+      transform: scale(1.02);
+    }
+
+    &:hover {
+      i {
+        color: $primary-color;
+      }
+    }
+    @media (max-width: 350px) {
+      text-align: center;
+    }
+    @media (min-width: 640px) {
+      display: flex;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 15px 10px 10px 35px;
+    }
+
+    @media (min-width: 1280px) {
+      width: 92%;
+      height: 70px;
+    }
+  }
+
+  &__icon {
+    margin-right: 15px;
+    color: $color-icon;
+    font-size: 1.2em;
+
+    @media (max-width: 350px) {
+      margin-right: 5px;
+      margin-left: 0px;
+    }
+
+    @media (min-width: 640px) {
+      margin: 0px 20px 0 0;
+    }
+
+    @media (min-width: 1024px) {
+      margin-right: 15px;
+      line-height: 0;
+    }
+  }
+
+  .numbers {
+  position: absolute;
+  left: -5.5px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: $primary-color;
+  color:$color-white;
+  line-height: 2;
+  text-align: center;
+  transform: translate(-4px, -1px);
+  font-size: 0.7em;
+ }
+}

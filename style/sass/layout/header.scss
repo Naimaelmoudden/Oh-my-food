@@ -1,0 +1,20 @@
+
+  #header {
+    box-shadow: $box-shadow;
+    width: 100%;
+    min-width: 320px;
+    padding: 15px 15px 9px 15px;
+    position: relative; 
+  }
+  .header__title {
+      font-family: $title-font;
+      margin: 0;
+      font-size: 2rem;
+      text-align: center;
+      display: block;
+      margin: auto;
+      padding: 1px 15px 1px 15px;
+      max-width: 168px;
+  }
+
+

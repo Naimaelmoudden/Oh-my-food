@@ -1,0 +1,29 @@
+@use "../utils/variables.scss";
+@use "../utils/mixin.scss";
+
+.explorer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $section-backColor;
+  padding-top: 1px;
+  padding-bottom: 60px;
+  text-align: center;
+  &__title{ 
+    text-align: center;
+    font-size: 1.5em;
+  }
+  &__txt{ 
+    padding: 0 20px 15px 20px;
+    font-size: 1.1rem;
+    color: lighten(#000000, 50%);
+    }
+  
+  & p {
+    text-align: center;
+    font-weight: 100;  
+  }
+}
+
+
+  

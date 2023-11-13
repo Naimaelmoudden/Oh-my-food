@@ -1,0 +1,22 @@
+ .location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $font-sizes;
+    background-color:  $input-backColor;
+    font-size: $font-sizes;
+    padding: 15px 0px;
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+    padding: 34px 0px;
+    &__icon{
+      margin: 0 5px;
+      text-align: center;
+      font-size: $font-sizes;
+    }
+    & p{
+      font-size: 13px;
+      font-weight: bold;    
+    }
+  }
